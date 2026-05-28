@@ -1,0 +1,44 @@
+{
+  "classification_features": [
+    "age",
+    "height",
+    "weight",
+    "ap_hi",
+    "ap_lo",
+    "bmi",
+    "pulse_pressure",
+    "cholesterol",
+    "gluc",
+    "smoke",
+    "alco",
+    "active"
+  ],
+  "regression_features": [
+    "age",
+    "gender",
+    "height",
+    "weight",
+    "ap_lo",
+    "cholesterol",
+    "gluc",
+    "smoke",
+    "alco",
+    "active",
+    "cardio",
+    "bmi"
+  ],
+  "classification_accuracy": 0.7376414749908726,
+  "classification_f1": 0.7204978607545702,
+  "regression_mae": 7.196913465727356,
+  "regression_rmse": 10.588660305283172,
+  "regression_r2": 0.6060643490664349,
+  "deployment_features": {
+    "comparison_feature": "Compares feature importance between disease prediction and systolic prediction models",
+    "classification_confidence_rule": "max predicted class probability from classifier.predict_proba",
+    "regression_confidence_rule": "1 - MAE / predicted_systolic, clipped to 0-1; for educational deployment only",
+    "explainable_ai": true,
+    "explainable_ai_rule": "Uses built-in feature_importances_ from GradientBoostingClassifier and GradientBoostingRegressor to show top influential features; educational model explanation only",
+    "regression_status_rule": "Normal if predicted systolic < 120 and input diastolic < 80; otherwise Tidak Normal",
+    "app_title": "Prediksi Penyakit Kardiovaskular"
+  }
+}
